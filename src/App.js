@@ -9,6 +9,7 @@ import Explore from './pages/Explore/Explore';
 import Home from './pages/Home/Home';
 import Login from './pages/login/Login';
 import Register from './pages/login/Register';
+import Payment from './pages/Payment/Payment';
 import Footer from './pages/Shared/Footer';
 import Navigation from './pages/Shared/Navigation';
 import PrivateRoute from './pages/Shared/PrivateRoute';
@@ -46,6 +47,9 @@ function App() {
         </Route>
         <Route path="/all-products">
         <AllProducts></AllProducts>
+        </Route>
+        <Route path="/payment/:id">
+        <Payment></Payment>
         </Route>
         </Switch>
         <Footer></Footer>

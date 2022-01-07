@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const CartItem = ({order, setReloadPage}) => {
     const{quantity, totalPrice, _id} = order
     const{product, img, price} = order.item;
     const uri = `https://salty-lowlands-18785.herokuapp.com/order/delete/${_id}`
-    console.log(uri)
+    // console.log(uri)
     const handleDelete = e =>{
         fetch(uri, {
             method: "DELETE"
@@ -38,7 +39,13 @@ const CartItem = ({order, setReloadPage}) => {
                 
                 </div>
                 <div className="col-md-4 card-body d-flex flex-column align-items-between justify-content-around">
-                    <button className='btn btn-success'>Proceed to Payment</button>
+                    {
+                        order.payment ? 'Paid'
+                        :
+                        <Link to={`/payment/${_id}`}>
+                        <button className='btn btn-success'>Proceed to Payment</button>
+                        </Link>
+                    }
                     <button onClick={handleDelete} className='btn btn-danger'>Cancel Order</button>
                 </div>
             </div>
