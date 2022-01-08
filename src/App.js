@@ -13,6 +13,7 @@ import Payment from './pages/Payment/Payment';
 import Footer from './pages/Shared/Footer';
 import Navigation from './pages/Shared/Navigation';
 import PrivateRoute from './pages/Shared/PrivateRoute';
+import Dashboard from './pages/Dashboard/Dashboard'
 
 function App() {
   return (
@@ -50,6 +51,9 @@ function App() {
         </Route>
         <Route path="/payment/:id">
         <Payment></Payment>
+        </Route>
+        <Route path="/dashboard">
+          <Dashboard></Dashboard>
         </Route>
         </Switch>
         <Footer></Footer>

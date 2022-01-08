@@ -23,9 +23,7 @@ const Navigation = () => {
                     <li className="nav-item">
                     <a className="nav-link" href="/explore">Explore</a>
                     </li>
-                    <li className="nav-item">
-                    <a className="nav-link" href="/add-product">Add Product</a>
-                    </li>
+                    
                     <li className="nav-item">
                     {
                         user.email?
@@ -38,8 +36,9 @@ const Navigation = () => {
                     <li>
                         <a className="nav-link" href="/cart">Cart</a>
                     </li>
+                   
                     <li>
-                        <a className="nav-link" href="/all-products">All Products</a>
+                        <a className="nav-link" href="/dashboard">Dashboard</a>
                     </li>
                     {
                         user.email && <span className='navbar-text'>Signed in from {user.email}</span> 
